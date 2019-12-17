@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:    context-path: /ssfacil-empresas
+spring:
+ datasource:
+  url: jdbc:h2:tcp://localhost/~/ssfacil-atendimento
+  username: ${db.user:desenv2}
+  password: ${db.password:desenv2}
+  driver-class-name: org.h2.Driver
+ jpa:
+  show-sql: true
+  hibernate:
+   ddl-auto: update
+  properties:
+   hibernate:
+    dialect: org.hibernate.dialect.H2Dialect
+    naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+ h2:
+  console:
+   enabled: true
+   path: /h2
+    
